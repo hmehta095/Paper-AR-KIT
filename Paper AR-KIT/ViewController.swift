@@ -58,7 +58,29 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     
-    
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        
+        // here checking wheather anchor is ar-image anchor
+        //then only actually we can say we found the image
+        guard anchor is ARImageAnchor
+            else {
+            return
+        }
+        
+        // if anchor is Ar-anchor then
+        // we get the container
+        
+        guard let container = sceneView.scene.rootNode.childNode(withName: "container", recursively: false)   //in this it ask us do you find us to find the container on the serface level of highest tear of scene graph
+            // we set as false because it is on surface level
+            else {
+            return
+        }
+        
+        container.removeFromParentNode()
+        // we can move the image around and container will alsomove around with it
+        node.addChildNode(container)
+        container.isHidden = false
+    }
     
     
     

@@ -34,8 +34,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillAppear(animated)
         
         // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
+        //ARImageTrackingConfiguration used to Track the image
+        let configuration = ARImageTrackingConfiguration()
 
+        // This is to check if AR Resource is nil then get out of that function
+        guard let arImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil)
+        else{
+            return
+        }
+        
+        // If Ar resources is not nill
+        configuration.trackingImages = arImages
+        
         // Run the view's session
         sceneView.session.run(configuration)
     }
@@ -46,6 +56,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Pause the view's session
         sceneView.session.pause()
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     // MARK: - ARSCNViewDelegate
     

@@ -67,6 +67,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             return
         }
         
+        //container
         // if anchor is Ar-anchor then
         // we get the container
         
@@ -80,6 +81,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // we can move the image around and container will alsomove around with it
         node.addChildNode(container)
         container.isHidden = false
+        
+        //video
     }
     
     

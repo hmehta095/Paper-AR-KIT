@@ -9,6 +9,8 @@
 import UIKit
 import SceneKit
 import ARKit
+import AVFoundation
+import SpriteKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
@@ -83,6 +85,25 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         container.isHidden = false
         
         //video
+        let videoURL = Bundle.main.url(forResource: "video", withExtension: "mp4")!
+        let videoPlayer = AVPlayer(url: videoURL)
+        
+        let videoScene = SKScene(size: CGSize(width: 720.0, height: 1280.0))
+        
+        let videoNode = SKVideoNode(avPlayer: videoPlayer)
+        videoNode.position = CGPoint(x: videoScene.size.width/2, y: videoScene.size.height/2)
+        videoNode.size = videoScene.size
+        videoNode.size = videoScene.size
+        videoNode.yScale = -1
+        
+        videoScene.addChild(videoNode)
+        
+        guard let video = container.childNode(withName: "video", recursively: false)
+            else {
+                return
+        }
+        video.geometry?.firstMaterial?.diffuse.contents = videoScene
+        
     }
     
     

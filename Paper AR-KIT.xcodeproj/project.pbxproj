@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA0455F3238F93830031FBD7 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BA0455F2238F93830031FBD7 /* video.mp4 */; };
+		8BDCB0C7460367FF84E58FDB /* Pods_Paper_AR_KIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1621A796EC393950E5DE6221 /* Pods_Paper_AR_KIT.framework */; };
+		BA467D272396E652008BB05B /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BA467D262396E652008BB05B /* video.mp4 */; };
+		BA467D4C2399E34E008BB05B /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BA467D4B2399E34E008BB05B /* video1.mp4 */; };
 		BAF7704E238F802C00BE5676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7704D238F802C00BE5676 /* AppDelegate.swift */; };
 		BAF77050238F802C00BE5676 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF7704F238F802C00BE5676 /* art.scnassets */; };
 		BAF77052238F802C00BE5676 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF77051238F802C00BE5676 /* ViewController.swift */; };
@@ -17,7 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BA0455F2238F93830031FBD7 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		0FB6E84B03827C5A1CB6ED05 /* Pods-Paper AR-KIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paper AR-KIT.release.xcconfig"; path = "Target Support Files/Pods-Paper AR-KIT/Pods-Paper AR-KIT.release.xcconfig"; sourceTree = "<group>"; };
+		1621A796EC393950E5DE6221 /* Pods_Paper_AR_KIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paper_AR_KIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A623665FAF252DE3E2312A8 /* Pods-Paper AR-KIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paper AR-KIT.debug.xcconfig"; path = "Target Support Files/Pods-Paper AR-KIT/Pods-Paper AR-KIT.debug.xcconfig"; sourceTree = "<group>"; };
+		BA467D262396E652008BB05B /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		BA467D4B2399E34E008BB05B /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
 		BAF7704A238F802C00BE5676 /* Paper AR-KIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paper AR-KIT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF7704D238F802C00BE5676 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAF7704F238F802C00BE5676 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -33,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BDCB0C7460367FF84E58FDB /* Pods_Paper_AR_KIT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4167C2F40B283F4D79B6CED5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1621A796EC393950E5DE6221 /* Pods_Paper_AR_KIT.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BAF77041238F802C00BE5676 = {
 			isa = PBXGroup;
 			children = (
 				BAF7704C238F802C00BE5676 /* Paper AR-KIT */,
 				BAF7704B238F802C00BE5676 /* Products */,
+				ECB33A1B284D2FE74EC55DB4 /* Pods */,
+				4167C2F40B283F4D79B6CED5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,7 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				BAF7704D238F802C00BE5676 /* AppDelegate.swift */,
-				BA0455F2238F93830031FBD7 /* video.mp4 */,
+				BA467D262396E652008BB05B /* video.mp4 */,
+				BA467D4B2399E34E008BB05B /* video1.mp4 */,
 				BAF7704F238F802C00BE5676 /* art.scnassets */,
 				BAF77051238F802C00BE5676 /* ViewController.swift */,
 				BAF77053238F802C00BE5676 /* Main.storyboard */,
@@ -70,6 +88,15 @@
 			path = "Paper AR-KIT";
 			sourceTree = "<group>";
 		};
+		ECB33A1B284D2FE74EC55DB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A623665FAF252DE3E2312A8 /* Pods-Paper AR-KIT.debug.xcconfig */,
+				0FB6E84B03827C5A1CB6ED05 /* Pods-Paper AR-KIT.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAF7705E238F802E00BE5676 /* Build configuration list for PBXNativeTarget "Paper AR-KIT" */;
 			buildPhases = (
+				03CFD751557047009F14B3D7 /* [CP] Check Pods Manifest.lock */,
 				BAF77046238F802C00BE5676 /* Sources */,
 				BAF77047238F802C00BE5676 /* Frameworks */,
 				BAF77048238F802C00BE5676 /* Resources */,
+				295F1214C4E7FD1BBB74431D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,14 +158,57 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAF77050238F802C00BE5676 /* art.scnassets in Resources */,
-				BA0455F3238F93830031FBD7 /* video.mp4 in Resources */,
+				BA467D272396E652008BB05B /* video.mp4 in Resources */,
 				BAF7705A238F802E00BE5676 /* LaunchScreen.storyboard in Resources */,
+				BA467D4C2399E34E008BB05B /* video1.mp4 in Resources */,
 				BAF77057238F802E00BE5676 /* Assets.xcassets in Resources */,
 				BAF77055238F802C00BE5676 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03CFD751557047009F14B3D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Paper AR-KIT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		295F1214C4E7FD1BBB74431D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Paper AR-KIT/Pods-Paper AR-KIT-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Paper AR-KIT/Pods-Paper AR-KIT-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Paper AR-KIT/Pods-Paper AR-KIT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BAF77046238F802C00BE5676 /* Sources */ = {
@@ -288,8 +360,10 @@
 		};
 		BAF7705F238F802E00BE5676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A623665FAF252DE3E2312A8 /* Pods-Paper AR-KIT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47KBUSC3QN;
 				INFOPLIST_FILE = "Paper AR-KIT/Info.plist";
@@ -297,8 +371,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "himu.Paper-AR-KIT";
+				PRODUCT_BUNDLE_IDENTIFIER = "himu.Paper-AR-KITt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -306,8 +381,10 @@
 		};
 		BAF77060238F802E00BE5676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FB6E84B03827C5A1CB6ED05 /* Pods-Paper AR-KIT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47KBUSC3QN;
 				INFOPLIST_FILE = "Paper AR-KIT/Info.plist";
@@ -315,8 +392,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "himu.Paper-AR-KIT";
+				PRODUCT_BUNDLE_IDENTIFIER = "himu.Paper-AR-KITt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

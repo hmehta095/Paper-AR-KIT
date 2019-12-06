@@ -11,6 +11,8 @@ import SceneKit
 import ARKit
 import AVFoundation
 import SpriteKit
+import YoutubePlayer_in_WKWebView
+
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
@@ -40,13 +42,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let configuration = ARImageTrackingConfiguration()
 
         // This is to check if AR Resource is nil then get out of that function
-        guard let arImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil)
+        guard let arImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: Bundle.main)
         else{
             return
         }
         
         // If Ar resources is not nill
         configuration.trackingImages = arImages
+        configuration.maximumNumberOfTrackedImages = 2
         
         // Run the view's session
         sceneView.session.run(configuration)
@@ -85,25 +88,73 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         container.isHidden = false
         
         //video
-        let videoURL = Bundle.main.url(forResource: "video", withExtension: "mp4")!
-        let videoPlayer = AVPlayer(url: videoURL)
+//        let videoURL: NSURL? = NSURL(string: "J35KGP4oe98")
+//        ViewController.load(withVideoId:"J35KGP4oe98")
         
-        let videoScene = SKScene(size: CGSize(width: 720.0, height: 1280.0))
         
-        let videoNode = SKVideoNode(avPlayer: videoPlayer)
-        videoNode.position = CGPoint(x: videoScene.size.width/2, y: videoScene.size.height/2)
-        videoNode.size = videoScene.size
-        videoNode.size = videoScene.size
-        videoNode.yScale = -1
         
-        videoScene.addChild(videoNode)
-        
-        guard let video = container.childNode(withName: "video", recursively: false)
-            else {
-                return
+        if let imageAnchor = anchor as? ARImageAnchor{
+            
+            let videoURL = Bundle.main.url(forResource: "video1", withExtension: "mp4")!
+            let videoPlayer = AVPlayer(url: videoURL as URL)
+            
+            let videoScene = SKScene(size: CGSize(width: 720.0, height: 1280.0))
+            
+            let videoNode = SKVideoNode(avPlayer: videoPlayer)
+            videoNode.position = CGPoint(x: videoScene.size.width/2, y: videoScene.size.height/2)
+            videoNode.size = videoScene.size
+            videoNode.size = videoScene.size
+            videoNode.yScale = -1
+            
+            
+            let videoURL1 = Bundle.main.url(forResource: "video", withExtension: "mp4")!
+            let videoPlayer1 = AVPlayer(url: videoURL1 as URL)
+
+            let videoScene1 = SKScene(size: CGSize(width: 720.0, height: 1280.0))
+
+            let videoNode1 = SKVideoNode(avPlayer: videoPlayer1)
+            videoNode1.position = CGPoint(x: videoScene1.size.width/2, y: videoScene1.size.height/2)
+            videoNode1.size = videoScene1.size
+            videoNode1.size = videoScene1.size
+            videoNode1.yScale = -1
+            
+            
+            
+            if imageAnchor.referenceImage.name == "car" {
+                videoNode1.removeFromParent()
+                videoScene.addChild(videoNode)
+                videoNode.play()
+                guard let video = container.childNode(withName: "video1", recursively: false)
+                    else {
+                        return
+                }
+                video.geometry?.firstMaterial?.diffuse.contents = videoScene
+            }
+                else if imageAnchor.referenceImage.name == "lambton"{
+                videoNode.removeFromParent()
+                    videoScene1.addChild(videoNode1)
+                    videoNode1.play()
+                    guard let video1 = container.childNode(withName: "video", recursively: false)
+                    else {
+                        return
+                    }
+                    video1.geometry?.firstMaterial?.diffuse.contents = videoScene1
+                    
+                }
+            
+            
+            
+            
+            
+
+                   
+            
         }
-        video.geometry?.firstMaterial?.diffuse.contents = videoScene
         
+        
+        
+        
+       
     }
     
     

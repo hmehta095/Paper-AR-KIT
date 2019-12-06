@@ -5,7 +5,10 @@
   },
   "resources" : [
     {
-      "filename" : "lambtonCard.arreferenceimage"
+      "filename" : "car.arreferenceimage"
+    },
+    {
+      "filename" : "lambton.arreferenceimage"
     }
   ]
 }

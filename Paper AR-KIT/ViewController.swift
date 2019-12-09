@@ -67,10 +67,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // here checking wheather anchor is ar-image anchor
         //then only actually we can say we found the image
-        guard anchor is ARImageAnchor
-            else {
-            return
-        }
+//        guard anchor is ARImageAnchor
+//            else {
+//            return
+//        }
         
         //container
         // if anchor is Ar-anchor then

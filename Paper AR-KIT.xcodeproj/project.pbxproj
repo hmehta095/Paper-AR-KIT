@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8BDCB0C7460367FF84E58FDB /* Pods_Paper_AR_KIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1621A796EC393950E5DE6221 /* Pods_Paper_AR_KIT.framework */; };
-		BA467D272396E652008BB05B /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BA467D262396E652008BB05B /* video.mp4 */; };
-		BA467D4E239ABAA5008BB05B /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BA467D4D239ABAA5008BB05B /* video1.mp4 */; };
+		BA467D272396E652008BB05B /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BA467D262396E652008BB05B /* video1.mp4 */; };
+		BA467D9023A0415A008BB05B /* video2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BA467D8F23A0415A008BB05B /* video2.mp4 */; };
+		BA467D9223A07166008BB05B /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BA467D9123A07165008BB05B /* video.mp4 */; };
 		BAF7704E238F802C00BE5676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7704D238F802C00BE5676 /* AppDelegate.swift */; };
 		BAF77050238F802C00BE5676 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF7704F238F802C00BE5676 /* art.scnassets */; };
 		BAF77052238F802C00BE5676 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF77051238F802C00BE5676 /* ViewController.swift */; };
@@ -22,8 +23,9 @@
 		0FB6E84B03827C5A1CB6ED05 /* Pods-Paper AR-KIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paper AR-KIT.release.xcconfig"; path = "Target Support Files/Pods-Paper AR-KIT/Pods-Paper AR-KIT.release.xcconfig"; sourceTree = "<group>"; };
 		1621A796EC393950E5DE6221 /* Pods_Paper_AR_KIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paper_AR_KIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A623665FAF252DE3E2312A8 /* Pods-Paper AR-KIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paper AR-KIT.debug.xcconfig"; path = "Target Support Files/Pods-Paper AR-KIT/Pods-Paper AR-KIT.debug.xcconfig"; sourceTree = "<group>"; };
-		BA467D262396E652008BB05B /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
-		BA467D4D239ABAA5008BB05B /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
+		BA467D262396E652008BB05B /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
+		BA467D8F23A0415A008BB05B /* video2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video2.mp4; sourceTree = "<group>"; };
+		BA467D9123A07165008BB05B /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		BAF7704A238F802C00BE5676 /* Paper AR-KIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paper AR-KIT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF7704D238F802C00BE5676 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAF7704F238F802C00BE5676 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -76,8 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				BAF7704D238F802C00BE5676 /* AppDelegate.swift */,
-				BA467D4D239ABAA5008BB05B /* video1.mp4 */,
-				BA467D262396E652008BB05B /* video.mp4 */,
+				BA467D262396E652008BB05B /* video1.mp4 */,
+				BA467D9123A07165008BB05B /* video.mp4 */,
+				BA467D8F23A0415A008BB05B /* video2.mp4 */,
 				BAF7704F238F802C00BE5676 /* art.scnassets */,
 				BAF77051238F802C00BE5676 /* ViewController.swift */,
 				BAF77053238F802C00BE5676 /* Main.storyboard */,
@@ -157,9 +160,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA467D9023A0415A008BB05B /* video2.mp4 in Resources */,
+				BA467D9223A07166008BB05B /* video.mp4 in Resources */,
 				BAF77050238F802C00BE5676 /* art.scnassets in Resources */,
-				BA467D4E239ABAA5008BB05B /* video1.mp4 in Resources */,
-				BA467D272396E652008BB05B /* video.mp4 in Resources */,
+				BA467D272396E652008BB05B /* video1.mp4 in Resources */,
 				BAF7705A238F802E00BE5676 /* LaunchScreen.storyboard in Resources */,
 				BAF77057238F802E00BE5676 /* Assets.xcassets in Resources */,
 				BAF77055238F802C00BE5676 /* Main.storyboard in Resources */,

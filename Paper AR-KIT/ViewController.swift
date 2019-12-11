@@ -100,6 +100,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             videoNode2.size = videoScene2.size
             videoNode2.size = videoScene2.size
             videoNode2.yScale = -1
+            
+            
+            let videoURL3 = Bundle.main.url(forResource: "video3", withExtension: "mp4")!
+            let videoPlayer3 = AVPlayer(url: videoURL3 as URL)
+
+            let videoScene3 = SKScene(size: CGSize(width: 720.0, height: 1280.0))
+
+            let videoNode3 = SKVideoNode(avPlayer: videoPlayer3)
+            videoNode3.position = CGPoint(x: videoScene3.size.width/2, y: videoScene3.size.height/2)
+            videoNode3.size = videoScene3.size
+            videoNode3.size = videoScene3.size
+            videoNode3.yScale = -1
             // here checking wheather anchor is ar-image anchor
             //then only actually we can say we found the image
     //        guard anchor is ARImageAnchor
@@ -195,6 +207,31 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                     video2.geometry?.firstMaterial?.diffuse.contents = videoScene2
                     
                 }
+                
+                 else if imageAnchor.referenceImage.name == "pic4"{
+                                    print("pic detected")
+                                    guard let container = sceneView.scene.rootNode.childNode(withName: "container3", recursively: true)   //in this it ask us do you find us to find the container on the serface level of highest tear of scene graph
+                                                             // we set as false because it is on surface level
+                                                             else {
+                                                                 print("Guard")
+                                                             return
+                                                         }
+                                                         
+                                                       //  container.removeFromParentNode()
+                                                         // we can move the image around and container will alsomove around with it
+                                                         node.addChildNode(container)
+                                                         container.isHidden = false
+
+                //                videoNode.removeFromParent()
+                                    videoScene3.addChild(videoNode3)
+                                    videoNode3.play()
+                                    guard let video3 = container.childNode(withName: "video3", recursively: false)
+                                    else {
+                                        return
+                                    }
+                                    video3.geometry?.firstMaterial?.diffuse.contents = videoScene3
+                                    
+                                }
 
                 
                 
